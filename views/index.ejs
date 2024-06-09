@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Game</title>
+    <link rel="stylesheet" href="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+        }
+        /* Header styles */
+        header {
+            background-color: #3f83f8;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        /* Footer styles */
+        footer {
+            background-color: #3f83f8;
+            color: white;
+            padding: 5px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Chessboard container */
+        .chessboard-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 140px); 
+        }
+        /* Chessboard styles */
+        .chessboard {
+            display: grid;
+            grid-template-columns: repeat(8, minmax(0, 1fr));
+            grid-template-rows: repeat(8, minmax(0, 1fr));
+            width: 400px;
+            height: 400px;
+            border: 2px solid #3f83f8;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        /* Chess piece styles */
+        .piece {
+            font-size: 36px;
+            cursor: pointer;
+            user-select: none;
+        }
+        .piece.white {
+            color: #cecece; /
+        }
+        .piece.black {
+            color: #000000; /
+        }
+       
+        .square {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+        }
+        .square.dark {
+            background-color: #b58863; 
+        }
+        h3{
+            padding-top: 1px;
+            color: rgb(0, 0, 0);
+            opacity: 90%;
+        
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Chess Game</h1>
+        <h3>“The most powerful weapon In Chess is to have the next move”</h3>
+    </header>
+
+    <!-- Chessboard container -->
+    <div class="chessboard-container">
+        <div class="chessboard">
+           
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Designed by <a href="https://www.linkedin.com/in/tejas-indurkar-1aa4bb250/">@tejasindurkar</a> </p>
+        <p>Copyright © 2024</p>
+    </footer>
+
+    <!-- External scripts -->
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js" integrity="sha512-xRllwz2gdZciIB+AkEbeq+gVhX8VB8XsfqeFbUh+SzHlN96dEduwtTuVuc2u9EROlmW9+yhRlxjif66ORpsgVA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/chessgame.js"></script>
+</body>
+</html>
